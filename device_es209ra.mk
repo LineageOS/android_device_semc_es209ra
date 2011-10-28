@@ -11,12 +11,6 @@ PRODUCT_DEVICE := es209ra
 PRODUCT_MODEL := X10i
 
 
-ifeq ($(TARGET_PREBUILT_KERNEL),)
-LOCAL_KERNEL := device/semc/es209ra/kernel
-else
-LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
-endif
-
 PRODUCT_COPY_FILES += \
     $(LOCAL_KERNEL):kernel
 
@@ -99,6 +93,7 @@ PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml \
     frameworks/base/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
     frameworks/base/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
+    frameworks/base/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.multitouch.distinct.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.distinct.xml \
     frameworks/base/data/etc/android.hardware.usb.accessory.xml:system/etc/permissions/android.hardware.usb.accessory.xml \
     frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
@@ -138,9 +133,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.compcache.default=0 \
     ro.product.locale.language=en \
     ro.product.locale.region=US \
+    ro.tethering.kb_disconnect=1 \
     persist.ro.ril.sms_sync_sending=1 \
     ro.camera.hd_shrink_vf_enabled=1 \
     persist.android.strictmode=0 \
+    persist.sys.use_16bpp_alpha=1 \
     BUILD_UTC_DATE=0
 
 # es209ra uses high-density artwork where available
