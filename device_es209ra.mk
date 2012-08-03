@@ -61,7 +61,7 @@ PRODUCT_COPY_FILES += \
     device/semc/es209ra/prebuilt/hw_config.sh:system/etc/hw_config.sh \
     device/semc/es209ra/prebuilt/bootrec:root/sbin/bootrec \
     device/semc/es209ra/prebuilt/bootrec-device:root/sbin/bootrec-device \
-    device/semc/es209ra/recovery.fstab:root/etc/recovery.fstab \
+    device/semc/es209ra/recovery.fstab:root/recovery.fstab \
     device/semc/es209ra/prebuilt/vold.fstab:system/etc/vold.fstab \
     device/semc/es209ra/prebuilt/initlogo.rle:root/initlogo.rle
 
@@ -97,7 +97,8 @@ PRODUCT_COPY_FILES += \
     bootable/recovery/res/images/indeterminate05.png:root/res/images/indeterminate05.png \
     bootable/recovery/res/images/indeterminate06.png:root/res/images/indeterminate06.png \
     bootable/recovery/res/images/progress_empty.png:root/res/images/progress_empty.png \
-    bootable/recovery/res/images/progress_fill.png:root/res/images/progress_fill.png
+    bootable/recovery/res/images/progress_fill.png:root/res/images/progress_fill.png \
+    bootable/recovery/res/images/stitch.png:root/res/images/stitch.png
 
 PRODUCT_COPY_FILES += \
     frameworks/base/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
